@@ -1,0 +1,3 @@
+server
+build_compiler_image/bin
+vendor/

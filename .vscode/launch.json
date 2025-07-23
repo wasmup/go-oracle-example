@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Package",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}",
+            "args": [],
+            "env": {
+                "DB_TIMEOUT": "60s",
+                "DEMO_ORACLE_USER": "admin2",
+                "DEMO_ORACLE_PASSWORD": "password2",
+                "DEMO_ORACLE_SERVER": "localhost:1521",
+                "DEMO_ORACLE_SERVICE_NAME": "DEMO",
+            }
+        }
+    ]
+}

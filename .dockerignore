@@ -1,0 +1,12 @@
+build_compiler_image/
+node_modules
+*.log
+.git
+.gitignore
+.env
+tmp*
+.cache
+dist
+build
+LICENSE
+README.md
