@@ -121,6 +121,7 @@ Roles and privileges granted to "user[2]admin" successfully.
 New admin user '"user[2]admin"' with password '"pass[2]special_char"' created successfully.
 ```
 
+## Set user name with special chars
 
 ```sh
 export DB_TIMEOUT="60s"
