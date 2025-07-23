@@ -1,6 +1,9 @@
 # go-oracle-DEMO
 Example Go code to use Oracle instant client
 
+## Overview
+This repository provides a comprehensive example of connecting to and interacting with an Oracle instant client/database using Go and the Godror driver.  
+
 
 ## Build Compiler image
 ```sh
@@ -27,6 +30,7 @@ cd ..
 
 
 ## Run Oracle DB 
+
 ```sh
 docker pull container-registry.oracle.com/database/free:latest
 
@@ -43,6 +47,8 @@ docker exec -it oracle1 sqlplus / as sysdba
 # SQL*Plus: Release 23.0.0.0.0 - Production on Wed Jul 23 15:30:49 2025
 # Version 23.8.0.25.04
 ```
+
+## Create DB and user
 
 ```sql
 
@@ -160,3 +166,13 @@ Attempting to drop user "user[2]admin" if it exists...
 time=2025-07-23T16:47:12.219Z level=ERROR source=server/main.go:129 msg=drop_user_er error=newUsername "\"user[2]admin\""="ORA-01940: cannot drop a user who is currently connected\nHelp: https://docs.oracle.com/error-help/db/ora-01940/"
 
 ```
+
+
+## License
+MIT License
+ 
+## References
+- [Godror Documentation](https://github.com/godror/godror)
+- [Go SQL Package](https://golang.org/pkg/database/sql/)
+- [Oracle Database Documentation](https://docs.oracle.com/en/database/)
+
