@@ -120,3 +120,42 @@ Roles and privileges granted to "user[2]admin" successfully.
 
 New admin user '"user[2]admin"' with password '"pass[2]special_char"' created successfully.
 ```
+
+
+```sh
+export DB_TIMEOUT="60s"
+export DEMO_ORACLE_USER='user[2]admin'
+export DEMO_ORACLE_PASSWORD='pass[2]special_char'
+export DEMO_ORACLE_SERVER="localhost:1521"
+export DEMO_ORACLE_SERVICE_NAME="DEMO"
+
+docker run --rm --network host \
+  -e DB_TIMEOUT \
+  -e DEMO_ORACLE_USER \
+  -e DEMO_ORACLE_PASSWORD \
+  -e DEMO_ORACLE_SERVER \
+  -e DEMO_ORACLE_SERVICE_NAME \
+  server:1.0.1
+
+
+```
+
+Sample Output2:
+```
+time=2025-07-23T16:47:11.895Z level=INFO source=server/main.go:31 msg=Go Version=go1.24.5 OS=linux ARCH=amd64 GOAMD64=v3 now=2025-07-23T16:47:11.895Z Local=UTC
+"user[2]admin"/pass[2]special_char@localhost:1521/DEMO
+time=2025-07-23T16:47:12.033Z level=INFO source=server/main.go:66 msg=ping_ok
+
+Oracle Database Version Information:
+Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+
+Concise Instance Version: 23.0.0.0.0
+
+Product Component Version:
+Product: Oracle Database 23ai Free
+Version: 23.0.0.0.0
+Status: Develop, Learn, and Run for Free
+Attempting to drop user "user[2]admin" if it exists...
+time=2025-07-23T16:47:12.219Z level=ERROR source=server/main.go:129 msg=drop_user_er error=newUsername "\"user[2]admin\""="ORA-01940: cannot drop a user who is currently connected\nHelp: https://docs.oracle.com/error-help/db/ora-01940/"
+
+```
